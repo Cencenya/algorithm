@@ -1,0 +1,14 @@
+# Log file
+*.log
+
+# Package Files #
+*.zip
+*.tar.gz
+*.rar
+
+# Font End Files
+/node_modules
+/dist
+
+# Mac OS
+.DS_Store
