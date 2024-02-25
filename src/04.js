@@ -18,4 +18,26 @@ function sort(arr1, arr2) {
 
   return arr1;
 }
-sort([1, 2, 3, 4, 5], [1, 3, 5, 7, 8]);
+// sort([1, 2, 3, 4, 5], [1, 3, 5, 7, 8]);
+
+function merage(A, B) {
+  let maxLength = A.length + B.length - 1;
+  const result = [];
+  let i = A.length - 1;
+  let j = B.length - 1;
+  for (let index = maxLength; index >= 0; index--) {
+    const numberA = A[i];
+    const numberB = B[j];
+    if (numberA > numberB) {
+      result[index] = numberA;
+      i = i-- > 0 ? i-- : 0;
+    } else {
+      result[index] = numberB;
+      j = j-- > 0 ? j-- : 0;
+    }
+  }
+
+  console.log("result", result);
+}
+
+merage([1, 2, 3, 4, 5], [1, 3, 5, 7, 8]);
